@@ -22,9 +22,6 @@ O Find Your Book é um App que auxilia com a busca dos seus livros de interesse.
 <br>
 
 <p align="center">
-  <a href="https://www.figma.com/file/n9J6604nMGB7Cgt2vEVtWb/Move.it-1.0-Dark-Mode">
-    <img alt="Figma" src="https://img.shields.io/badge/figma%20-%236E40C9.svg?&style=for-the-badge&logo=figma&logoColor=white"/>
-  </a>
 </p>
 
 <br>
@@ -46,7 +43,7 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
 ```bash
 # Abra um terminal e copie este repositório com o comando
-git clone https://github.com/folfer/moveit-next.git
+git clone https://github.com/folfer/findyourbook.git
 # ou use a opção de download.
 
 # Entre na pasta web com
