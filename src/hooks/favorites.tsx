@@ -4,7 +4,7 @@ import React, {
   useContext,
   createContext,
   useEffect,
-} from 'react';
+} from "react";
 
 interface Book {
   id: string;
@@ -37,7 +37,7 @@ const FavoriteProvider: React.FC = ({ children }) => {
   // verifica se tem livros salvos e seta a variavel favorites
   useEffect(() => {
     function loadFavorites(): void {
-      const storagedFavorites = localStorage.getItem('@yourbook:favorites');
+      const storagedFavorites = localStorage.getItem("@yourbook:favorites");
       if (storagedFavorites) {
         setFavorites([...JSON.parse(storagedFavorites)]);
       }
@@ -47,41 +47,41 @@ const FavoriteProvider: React.FC = ({ children }) => {
 
   const removeFavorite = useCallback(
     (fav: Book) => {
-      const favoritsWithoutRemoved = favorites.filter(f => f.id !== fav.id);
+      const favoritsWithoutRemoved = favorites.filter((f) => f.id !== fav.id);
       setFavorites(favoritsWithoutRemoved);
       localStorage.setItem(
-        '@yourbook:favorites',
-        JSON.stringify(favoritsWithoutRemoved),
+        "@yourbook:favorites",
+        JSON.stringify(favoritsWithoutRemoved)
       );
     },
-    [favorites],
+    [favorites]
   );
 
   const addFavorite = useCallback(
     (fav: Book) => {
-      const alreadyFavorite = favorites.find(f => f.id === fav.id);
+      const alreadyFavorite = favorites.find((f) => f.id === fav.id);
 
       if (alreadyFavorite) {
         removeFavorite(fav);
       } else {
         localStorage.setItem(
-          '@yourbook:favorites',
-          JSON.stringify([...favorites, { ...fav }]),
+          "@yourbook:favorites",
+          JSON.stringify([...favorites, { ...fav }])
         );
         setFavorites([...favorites, { ...fav }]);
       }
     },
-    [favorites, removeFavorite],
+    [favorites, removeFavorite]
   );
 
   const clearFavorites = useCallback(() => {
     setFavorites([]);
-    localStorage.setItem('@yourbook:favorites', '');
+    localStorage.setItem("@yourbook:favorites", "");
   }, []);
 
   const value = React.useMemo(
     () => ({ favorites, addFavorite, removeFavorite, clearFavorites }),
-    [favorites, addFavorite, removeFavorite, clearFavorites],
+    [favorites, addFavorite, removeFavorite, clearFavorites]
   );
 
   return (
@@ -95,7 +95,7 @@ function useFavorite(): FavoriteContext {
   const context = useContext(FavoriteContext);
 
   if (!context) {
-    throw new Error('useFavorite must be used within FavoriteProvider');
+    throw new Error("useFavorite must be used within FavoriteProvider");
   }
 
   return context;

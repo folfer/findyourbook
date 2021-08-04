@@ -6,7 +6,6 @@ import { useSearch } from "../../hooks/search";
 
 import {
   Container,
-  Title,
   SearchForm,
   InputForm,
   Button,
