@@ -17,7 +17,7 @@
 
 ## Sobre o Find Your Book
 
-O Find Your Book é um App que auxilia(https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro), com a busca dos seus livros de interesse. Desenvolvido durante a madrugada para o desafio da IBM.
+O Find Your Book é um App que auxilia com a busca dos seus livros de interesse. Desenvolvido durante a madrugada para o desafio da IBM.
 
 <br>
 
@@ -63,7 +63,7 @@ yarn dev
 
 ---
 
-Feito com :red_heart: by [Victor Ramos](https://github.com/folfer)
+Feito com :yellow_heart: by [Victor Ramos](https://github.com/folfer)
 
 [![Linkedin Badge](https://img.shields.io/badge/-Victor%20Ramos-6E40C9?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-calazans-ramos/)](https://www.linkedin.com/in/victor-calazans-ramos/)
 [![Gmail Badge](https://img.shields.io/badge/-victor.folfer@gmail.com-6E40C9?style=flat-square&logo=Gmail&logoColor=white&link=mailto:victor.folfer@gmail.com)](mailto:victor.folfer@gmail.com)
